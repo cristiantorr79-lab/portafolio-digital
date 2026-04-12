@@ -4,39 +4,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio Técnico - [Tu Nombre]</title>
+    <title>Portafolio Técnico | Cristian Torres Ojeda</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             max-width: 900px;
             margin: auto;
             padding: 20px;
             color: #333;
+            background-color: #f9f9f9;
         }
 
         header {
-            border-bottom: 2px solid #0056b3;
-            padding-bottom: 20px;
+            background: #1a2a6c;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 10px;
             margin-bottom: 30px;
         }
 
-        .proyecto {
-            background: #f4f4f4;
-            padding: 15px;
-            margin-bottom: 20px;
-            border-radius: 8px;
+        .contacto {
+            margin-top: 15px;
         }
 
-        .caso-estudio {
-            border-left: 5px solid #0056b3;
-            padding-left: 20px;
-            background: #eef6ff;
-            padding: 20px;
+        .contacto a {
+            color: #ffd700;
+            margin: 0 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        section {
+            background: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         h2 {
-            color: #0056b3;
+            color: #1a2a6c;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        .badge {
+            background: #eef6ff;
+            color: #1a2a6c;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: inline-block;
+        }
+
+        .proyecto {
+            border-left: 4px solid #1a2a6c;
+            padding-left: 15px;
+            margin-bottom: 20px;
         }
     </style>
 </head>
@@ -44,41 +72,55 @@
 <body>
 
     <header>
-        <h1>[Tu Nombre Completo]</h1>
-        <p><strong>Perfil:</strong> Talento Junior Tech | Especialista en Desarrollo Android y Automatización</p>
-        <p>📍 Los Lagos, Chile | <a href="[Tu_LinkedIn]">LinkedIn</a> | <a href="[Tu_GitHub]">GitHub</a></p>
+        <h1>Cristian Torres Ojeda</h1>
+        <p>Talento Junior Tech | Especialista en Desarrollo Android y Gestión Estratégica</p>
+        <div class="contacto">
+            <a href="https://www.linkedin.com/in/cristian-torres-ojeda-ab09a6336" target="_blank">LinkedIn</a> |
+            <a href="https://github.com/cristiantorr79-lab" target="_blank">GitHub</a> |
+            <a href="#">Descargar CV (Próximamente)</a>
+        </div>
     </header>
 
-    <section>
-        <h2>Sobre Mi</h2>
-        <p>Candidato para el puesto de **Talento Junior Tech** con formación técnica intensiva[cite: 12, 22]. Enfocado
-            en proponer soluciones tecnológicas y trabajar en equipos interdisciplinarios[cite: 16, 17].</p>
+    <section id="resumen">
+        <h2>Sobre Mí</h2>
+        <p>
+            Técnico en Administración y Gestión de Empresas con más de 15 años de experiencia real en el terreno.
+            He liderado y apoyado emprendimientos en diversos sectores, buscando siempre la eficiencia operativa.
+        </p>
+        <p>
+            Soy un apasionado del <strong>aprendizaje continuo</strong>. Me he formado de manera autónoma en IA
+            (Google, Alura, Learning Heroes) y mediante cursos SENCE en gestión, contabilidad y modelos de negocio.
+            Mi objetivo es utilizar mi formación en <strong>Android Nativo (Kotlin)</strong> para construir
+            herramientas digitales que potencien la productividad de las Pymes.
+        </p>
+        <div>
+            <span class="badge">Kotlin & Android Studio</span>
+            <span class="badge">IA Generativa Aplicada</span>
+            <span class="badge">Modelo Canvas</span>
+            <span class="badge">Gestión de Pymes</span>
+        </div>
     </section>
 
-    <section>
-        <h2>Portafolio de Proyectos (Mínimo 3)</h2>
+    <section id="proyectos">
+        <h2>Proyectos (En Desarrollo)</h2>
         <div class="proyecto">
             <h3>1. App de Matemáticas para Niños</h3>
-            <p>Aplicación móvil desarrollada en Kotlin para facilitar el aprendizaje escolar.</p>
+            <p>Proyecto final del bootcamp: Una aplicación diseñada para facilitar el aprendizaje de matemáticas de
+                forma interactiva.</p>
         </div>
         <div class="proyecto">
             <h3>2. Sistema POS Cafetería Cafelino</h3>
-            <p>Automatización de ventas y gestión de stock mediante Google Sheets y AppSheet.</p>
+            <p>Automatización de ventas y gestión de stock para optimizar la operación diaria de una cafetería real.</p>
         </div>
         <div class="proyecto">
             <h3>3. Agrovista (Monitoreo Satelital)</h3>
-            <p>Visualización de índices NDVI y NDWI para optimización de cultivos.</p>
+            <p>Visualización de índices NDVI/NDWI para el sector agrícola utilizando datos satelitales.</p>
         </div>
     </section>
 
-    <section class="caso-estudio">
-        <h2>Caso de Estudio: [Elige un Proyecto]</h2>
-        <p><strong>Descripción:</strong> [cite: 73] Breve resumen del proyecto.</p>
-        <p><strong>Desafío Principal:</strong> [cite: 75] ¿Qué problema difícil tuviste que resolver?</p>
-        <p><strong>Solución:</strong> [cite: 76] ¿Cómo lo arreglaste?</p>
-        <p><strong>Herramientas:</strong> [cite: 78] Android Studio, Kotlin, Retrofit, Git.</p>
-        <p><strong>Aprendizajes y Métricas:</strong> [cite: 79, 81] Mejoras en tiempo de respuesta, habilidades
-            aplicadas.</p>
+    <section id="caso-estudio" style="background: #fffbe6; border: 1px dashed #e6cc00;">
+        <h2>Caso de Estudio</h2>
+        <p><em>Esta sección será completada una vez finalicemos el desarrollo de los proyectos.</em></p>
     </section>
 
 </body>
