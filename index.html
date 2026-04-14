@@ -2,127 +2,481 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portafolio Técnico | Cristian Torres Ojeda</title>
+    <meta name="description"
+        content="Portafolio digital de Cristian Torres Ojeda: desarrollo Android, IA aplicada, gestión estratégica y proyectos tecnológicos con foco en soluciones reales." />
     <style>
+        :root {
+            --bg: #f4f7fb;
+            --card: #ffffff;
+            --primary: #1a2a6c;
+            --primary-2: #2747b5;
+            --accent: #ffd700;
+            --text: #243042;
+            --muted: #5f6b7a;
+            --border: #e7ecf3;
+            --success: #eaf7ee;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
+            margin: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(180deg, #eef3fb 0%, #f8fafc 100%);
+            color: var(--text);
             line-height: 1.6;
-            max-width: 900px;
-            margin: auto;
-            padding: 20px;
-            color: #333;
-            background-color: #f9f9f9;
         }
 
-        header {
-            background: #1a2a6c;
+        .container {
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 24px;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-2) 100%);
             color: white;
-            padding: 40px 20px;
-            text-align: center;
-            border-radius: 10px;
-            margin-bottom: 30px;
+            padding: 48px 28px;
+            border-radius: 22px;
+            box-shadow: 0 16px 35px rgba(26, 42, 108, 0.18);
+            margin-bottom: 24px;
         }
 
-        .contacto {
-            margin-top: 15px;
+        .hero h1 {
+            margin: 0 0 10px;
+            font-size: clamp(2rem, 4vw, 3rem);
+            line-height: 1.1;
         }
 
-        .contacto a {
-            color: #ffd700;
-            margin: 0 10px;
+        .hero p {
+            margin: 0;
+            font-size: 1.08rem;
+            max-width: 820px;
+        }
+
+        .hero-actions,
+        .contact-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 22px;
+        }
+
+        .btn {
+            display: inline-block;
             text-decoration: none;
-            font-weight: bold;
+            padding: 12px 18px;
+            border-radius: 999px;
+            font-weight: 700;
+            transition: transform 0.18s ease, box-shadow 0.18s ease, opacity 0.18s ease;
+            border: 2px solid transparent;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: #16213c;
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.12);
+            color: white;
+            border-color: rgba(255, 255, 255, 0.25);
+        }
+
+        .btn-disabled {
+            background: rgba(255, 255, 255, 0.12);
+            color: rgba(255, 255, 255, 0.72);
+            border-color: rgba(255, 255, 255, 0.18);
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background: rgba(244, 247, 251, 0.88);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(26, 42, 108, 0.08);
+        }
+
+        nav .container {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding-top: 14px;
+            padding-bottom: 14px;
+        }
+
+        nav a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
         }
 
         section {
-            background: white;
-            padding: 25px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 28px;
+            margin-bottom: 22px;
+            box-shadow: 0 10px 24px rgba(15, 23, 42, 0.05);
         }
 
         h2 {
-            color: #1a2a6c;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 10px;
+            margin-top: 0;
+            font-size: 1.7rem;
+            color: var(--primary);
+        }
+
+        .lead {
+            font-size: 1.05rem;
+            color: var(--muted);
+        }
+
+        .grid {
+            display: grid;
+            gap: 18px;
+        }
+
+        .grid-3 {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .grid-2 {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .card {
+            background: #fcfdff;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 20px;
+            height: 100%;
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: #1d2c5c;
+        }
+
+        .badge-wrap {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 16px;
         }
 
         .badge {
-            background: #eef6ff;
-            color: #1a2a6c;
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 0.9em;
-            font-weight: bold;
-            margin-bottom: 5px;
-            display: inline-block;
+            background: #eef4ff;
+            color: var(--primary);
+            border: 1px solid #d8e5ff;
+            padding: 8px 12px;
+            border-radius: 999px;
+            font-size: 0.92rem;
+            font-weight: 700;
         }
 
-        .proyecto {
-            border-left: 4px solid #1a2a6c;
-            padding-left: 15px;
-            margin-bottom: 20px;
+        .project {
+            border-left: 6px solid var(--primary);
+            padding-left: 18px;
+        }
+
+        .project .meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 12px 0 0;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #f3f6fb;
+            color: #31415f;
+            border: 1px solid #e1e8f2;
+            border-radius: 999px;
+            padding: 6px 10px;
+            font-size: 0.85rem;
+            font-weight: 700;
+        }
+
+        .status {
+            background: var(--success);
+            color: #1d6b39;
+            border: 1px solid #cdebd6;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin-bottom: 0;
+        }
+
+        .highlight {
+            background: #fff9dc;
+            border: 1px dashed #e5c700;
+        }
+
+        footer {
+            text-align: center;
+            color: var(--muted);
+            padding: 8px 0 28px;
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 900px) {
+
+            .grid-3,
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                padding: 34px 22px;
+            }
+
+            section {
+                padding: 22px;
+            }
         }
     </style>
 </head>
 
 <body>
-
-    <header>
-        <h1>Cristian Torres Ojeda</h1>
-        <p>Talento Junior Tech | Especialista en Desarrollo Android y Gestión Estratégica</p>
-        <div class="contacto">
-            <a href="https://www.linkedin.com/in/cristian-torres-ojeda-ab09a6336" target="_blank">LinkedIn</a> |
-            <a href="https://github.com/cristiantorr79-lab" target="_blank">GitHub</a> |
-            <a href="#">Descargar CV (Próximamente)</a>
+    <nav>
+        <div class="container">
+            <a href="#sobre-mi">Sobre mí</a>
+            <a href="#fortalezas">Fortalezas</a>
+            <a href="#skills">Habilidades</a>
+            <a href="#proyectos">Proyectos</a>
+            <a href="#formacion">Formación</a>
+            <a href="#objetivo">Objetivo</a>
+            <a href="#contacto">Contacto</a>
         </div>
-    </header>
+    </nav>
 
-    <section id="resumen">
-        <h2>Sobre Mí</h2>
-        <p>
-            Técnico en Administración y Gestión de Empresas con más de 15 años de experiencia real en el terreno.
-            He liderado y apoyado emprendimientos en diversos sectores, buscando siempre la eficiencia operativa.
-        </p>
-        <p>
-            Soy un apasionado del <strong>aprendizaje continuo</strong>. Me he formado de manera autónoma en IA
-            (Google, Alura, Learning Heroes) y mediante cursos SENCE en gestión, contabilidad y modelos de negocio.
-            Mi objetivo es utilizar mi formación en <strong>Android Nativo (Kotlin)</strong> para construir
-            herramientas digitales que potencien la productividad de las Pymes.
-        </p>
-        <div>
-            <span class="badge">Kotlin & Android Studio</span>
-            <span class="badge">IA Generativa Aplicada</span>
-            <span class="badge">Modelo Canvas</span>
-            <span class="badge">Gestión de Pymes</span>
-        </div>
-    </section>
+    <main class="container">
+        <header class="hero">
+            <h1>Cristian Torres Ojeda</h1>
+            <p>
+                Desarrollador Android Junior en formación | Técnico en Administración y Gestión de Empresas |
+                Emprendedor con foco en soluciones digitales, productividad e IA aplicada.
+            </p>
 
-    <section id="proyectos">
-        <h2>Proyectos (En Desarrollo)</h2>
-        <div class="proyecto">
-            <h3>1. App de Matemáticas para Niños</h3>
-            <p>Proyecto final del bootcamp: Una aplicación diseñada para facilitar el aprendizaje de matemáticas de
-                forma interactiva.</p>
-        </div>
-        <div class="proyecto">
-            <h3>2. Sistema POS Cafetería Cafelino</h3>
-            <p>Automatización de ventas y gestión de stock para optimizar la operación diaria de una cafetería real.</p>
-        </div>
-        <div class="proyecto">
-            <h3>3. Agrovista (Monitoreo Satelital)</h3>
-            <p>Visualización de índices NDVI/NDWI para el sector agrícola utilizando datos satelitales.</p>
-        </div>
-    </section>
+            <div class="hero-actions">
+                <a class="btn btn-primary" href="https://www.linkedin.com/in/cristian-torres-ojeda-ab09a6336"
+                    target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a class="btn btn-secondary" href="https://github.com/cristiantorr79-lab" target="_blank"
+                    rel="noopener noreferrer">GitHub</a>
+                <span class="btn btn-disabled">CV disponible a solicitud</span>
+            </div>
+        </header>
 
-    <section id="caso-estudio" style="background: #fffbe6; border: 1px dashed #e6cc00;">
-        <h2>Caso de Estudio</h2>
-        <p><em>Esta sección será completada una vez finalicemos el desarrollo de los proyectos.</em></p>
-    </section>
+        <section id="sobre-mi">
+            <h2>Sobre mí</h2>
+            <p class="lead">
+                Combino experiencia real en gestión, operación y emprendimiento con una transición firme al mundo
+                tecnológico.
+                Mi enfoque está en construir soluciones útiles, claras y con impacto real para personas, pymes y
+                proyectos con visión de crecimiento.
+            </p>
+            <p>
+                Soy Técnico en Administración y Gestión de Empresas, con más de 15 años de experiencia en terreno.
+                He liderado y apoyado iniciativas en distintos sectores, siempre con una mirada práctica: ordenar
+                procesos,
+                detectar oportunidades y convertir problemas en mejoras concretas.
+            </p>
+            <p>
+                Actualmente me encuentro en la etapa final de formación en desarrollo móvil Android, fortaleciendo
+                conocimientos en Kotlin,
+                arquitectura de aplicaciones e integración de herramientas digitales. Además, me he formado de manera
+                autónoma en IA aplicada,
+                gestión, contabilidad y modelos de negocio.
+            </p>
+        </section>
 
+        <section id="fortalezas">
+            <h2>Lo que aporto</h2>
+            <div class="grid grid-3">
+                <article class="card">
+                    <h3>Visión de negocio</h3>
+                    <p>No veo el software como adorno. Lo veo como herramienta para resolver problemas, ahorrar tiempo y
+                        generar valor.</p>
+                </article>
+                <article class="card">
+                    <h3>Aprendizaje continuo</h3>
+                    <p>Me gusta aprender, probar, corregir y mejorar. Entro de frente a lo técnico sin perder el sentido
+                        práctico.</p>
+                </article>
+                <article class="card">
+                    <h3>Experiencia real</h3>
+                    <p>Tengo base administrativa y experiencia operativa, lo que me permite entender mejor las
+                        necesidades reales de un proyecto.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Habilidades y tecnologías</h2>
+            <div class="grid grid-2">
+                <article class="card">
+                    <h3>Desarrollo y tecnología</h3>
+                    <div class="badge-wrap">
+                        <span class="badge">Kotlin</span>
+                        <span class="badge">Android Studio</span>
+                        <span class="badge">Git & GitHub</span>
+                        <span class="badge">HTML</span>
+                        <span class="badge">GitHub Pages</span>
+                        <span class="badge">IA Generativa Aplicada</span>
+                    </div>
+                </article>
+                <article class="card">
+                    <h3>Gestión y negocio</h3>
+                    <div class="badge-wrap">
+                        <span class="badge">Gestión de Pymes</span>
+                        <span class="badge">Modelo Canvas</span>
+                        <span class="badge">Optimización de procesos</span>
+                        <span class="badge">Administración</span>
+                        <span class="badge">Contabilidad básica</span>
+                        <span class="badge">Emprendimiento</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="proyectos">
+            <h2>Proyectos destacados</h2>
+
+            <article class="project card">
+                <h3>Agrovista</h3>
+                <p>
+                    Proyecto orientado al monitoreo agrícola, con foco en visualización de indicadores como NDVI y NDWI,
+                    y una proyección futura hacia automatización, apoyo satelital e IA aplicada al sector agrícola.
+                </p>
+                <ul>
+                    <li>Enfoque en solución útil para pequeños productores y entornos con conectividad limitada.</li>
+                    <li>Combinación de lógica técnica con visión de terreno y usabilidad.</li>
+                    <li>Proyecto pensado para resolver problemas reales del mundo agrícola.</li>
+                </ul>
+                <div class="meta">
+                    <span class="tag">Android</span>
+                    <span class="tag">Kotlin</span>
+                    <span class="tag">IA aplicada</span>
+                    <span class="tag">Agritech</span>
+                    <span class="tag status">En desarrollo</span>
+                </div>
+            </article>
+
+            <article class="project card">
+                <h3>MateKids</h3>
+                <p>
+                    Aplicación educativa móvil enfocada en apoyar el aprendizaje de matemáticas para niños de forma
+                    simple,
+                    visual e interactiva. Surge como proyecto final del bootcamp.
+                </p>
+                <ul>
+                    <li>Diseño con foco en experiencia clara, amigable y funcional.</li>
+                    <li>Orientada a aprendizaje progresivo y motivación del usuario infantil.</li>
+                    <li>Proyecto ideal para demostrar lógica, estructura y enfoque de producto.</li>
+                </ul>
+                <div class="meta">
+                    <span class="tag">Android</span>
+                    <span class="tag">Kotlin</span>
+                    <span class="tag">Educación</span>
+                    <span class="tag">UI móvil</span>
+                    <span class="tag status">Proyecto final</span>
+                </div>
+            </article>
+
+            <article class="project card">
+                <h3>Cafelino POS</h3>
+                <p>
+                    Propuesta de sistema para automatizar ventas y apoyar la gestión de stock de una cafetería,
+                    buscando mejorar la operación diaria y entregar mejor control del negocio.
+                </p>
+                <ul>
+                    <li>Enfoque práctico en orden, seguimiento y eficiencia operativa.</li>
+                    <li>Conexión directa entre necesidades del negocio y solución digital.</li>
+                    <li>Proyecto alineado con experiencia administrativa y visión emprendedora.</li>
+                </ul>
+                <div class="meta">
+                    <span class="tag">POS</span>
+                    <span class="tag">Gestión</span>
+                    <span class="tag">Automatización</span>
+                    <span class="tag">Negocio</span>
+                    <span class="tag status">En desarrollo</span>
+                </div>
+            </article>
+        </section>
+
+        <section id="formacion">
+            <h2>Formación</h2>
+            <div class="grid grid-2">
+                <article class="card">
+                    <h3>Formación técnica</h3>
+                    <ul>
+                        <li>Técnico en Administración y Gestión de Empresas, Instituto Profesional AIEP.</li>
+                        <li>Bootcamp de Desarrollo de Aplicaciones Móviles Android.</li>
+                        <li>Aprendizaje continuo en desarrollo, lógica y construcción de proyectos.</li>
+                        <li>Práctica con GitHub y publicación web en GitHub Pages.</li>
+                    </ul>
+                </article>
+                <article class="card">
+                    <h3>Formación complementaria</h3>
+                    <ul>
+                        <li>IA aplicada mediante formación autónoma en plataformas como Google, Alura y Learning Heroes.
+                        </li>
+                        <li>Cursos SENCE en gestión, contabilidad y modelos de negocio.</li>
+                        <li>Base sólida en administración y operación de emprendimientos.</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section id="objetivo" class="highlight">
+            <h2>Objetivo profesional</h2>
+            <p>
+                Mi meta es crecer como profesional en tecnología, integrando desarrollo Android, inteligencia artificial
+                y gestión estratégica
+                para crear soluciones digitales con sentido práctico. Me interesa participar en proyectos donde pueda
+                aportar visión de negocio,
+                compromiso con el aprendizaje y capacidad para construir herramientas que realmente sirvan.
+            </p>
+        </section>
+
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <p>
+                Si quieres revisar mi trabajo, conversar sobre una oportunidad o simplemente conectar, aquí están mis
+                enlaces principales.
+            </p>
+            <div class="contact-links">
+                <a class="btn btn-primary" href="https://www.linkedin.com/in/cristian-torres-ojeda-ab09a6336"
+                    target="_blank" rel="noopener noreferrer">Ver LinkedIn</a>
+                <a class="btn btn-secondary" href="https://github.com/cristiantorr79-lab" target="_blank"
+                    rel="noopener noreferrer">Ver GitHub</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Portafolio digital de Cristian Torres Ojeda · Actualizado 2026</p>
+    </footer>
 </body>
 
 </html>
