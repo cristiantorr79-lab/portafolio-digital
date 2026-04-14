@@ -205,6 +205,48 @@
             margin: 12px 0 0;
         }
 
+        .project-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 18px;
+        }
+
+        .project-btn {
+            display: inline-block;
+            text-decoration: none;
+            padding: 10px 14px;
+            border-radius: 999px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            border: 1px solid transparent;
+            transition: transform 0.18s ease, box-shadow 0.18s ease, opacity 0.18s ease;
+        }
+
+        .project-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+        }
+
+        .project-btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .project-btn-secondary {
+            background: #eef4ff;
+            color: var(--primary);
+            border-color: #d8e5ff;
+        }
+
+        .project-btn-disabled {
+            background: #f3f5f8;
+            color: #7c8797;
+            border-color: #e0e6ee;
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+
         .tag {
             display: inline-block;
             background: #f3f6fb;
@@ -340,13 +382,12 @@
                     <div class="badge-wrap">
                         <span class="badge">Kotlin</span>
                         <span class="badge">Android Studio</span>
+                        <span class="badge">Jetpack Compose</span>
+                        <span class="badge">Firebase</span>
                         <span class="badge">Git & GitHub</span>
                         <span class="badge">HTML</span>
                         <span class="badge">GitHub Pages</span>
                         <span class="badge">IA Generativa Aplicada</span>
-                        <span class="badge">React Native / Expo</span>
-                        <span class="badge">TypeScript</span>
-                        <span class="badge">Spring Boot</span>
                     </div>
                 </article>
                 <article class="card">
@@ -366,10 +407,63 @@
         <section id="proyectos">
             <h2>Proyectos destacados</h2>
             <p class="lead">
-                Mis proyectos reflejan una evolución clara: desde una primera idea aplicada a un emprendimiento real,
-                pasando por el desarrollo de una app educativa como proyecto final del bootcamp, hasta una propuesta
-                con mayor proyección técnica y de impacto como Agrovista.
+                Estos proyectos muestran mi evolución en tecnología: desde una primera solución pensada para un
+                emprendimiento real, pasando por una app educativa estructurada como proyecto final de bootcamp, hasta
+                una propuesta con mayor proyección para el sector agrícola.
             </p>
+
+            <article class="project card">
+                <h3>Agrovista</h3>
+                <p>
+                    Proyecto orientado al apoyo del sector agrícola, con foco en pequeños agricultores, pequeños
+                    productores y agricultura familiar campesina. Busca ordenar evaluaciones, facilitar el seguimiento
+                    de predios y proyectar una evolución hacia análisis satelital e IA aplicada. Por ahora, el
+                    repositorio de la app se mantiene privado.
+                </p>
+                <ul>
+                    <li>Enfoque en solución útil para pequeños agricultores, productores locales y AFC.</li>
+                    <li>Combinación de lógica técnica con visión de terreno y usabilidad.</li>
+                    <li>Proyecto pensado para resolver problemas reales del mundo agrícola.</li>
+                </ul>
+                <div class="meta">
+                    <span class="tag">Agritech</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">FastAPI</span>
+                    <span class="tag">PDF Reports</span>
+                    <span class="tag status">En desarrollo</span>
+                </div>
+                <div class="project-actions">
+                    <span class="project-btn project-btn-disabled">Repositorio privado</span>
+                    <span class="project-btn project-btn-disabled">Demo no publicada</span>
+                </div>
+            </article>
+
+            <article class="project card">
+                <h3>MateKids</h3>
+                <p>
+                    Aplicación educativa móvil enfocada en apoyar el aprendizaje de matemáticas para niños de 8 a 9
+                    años de forma simple, visual e interactiva. Surge como proyecto final del bootcamp y refleja una
+                    etapa de mayor orden técnico, arquitectura y enfoque de producto.
+                </p>
+                <ul>
+                    <li>Diseño con foco en experiencia clara, amigable y funcional.</li>
+                    <li>Arquitectura pensada para una app educativa escalable.</li>
+                    <li>Proyecto ideal para demostrar lógica, estructura y enfoque de producto.</li>
+                </ul>
+                <div class="meta">
+                    <span class="tag">Android</span>
+                    <span class="tag">Kotlin</span>
+                    <span class="tag">Jetpack Compose</span>
+                    <span class="tag">Firebase</span>
+                    <span class="tag status">Proyecto final bootcamp</span>
+                </div>
+                <div class="project-actions">
+                    <a class="project-btn project-btn-primary"
+                        href="https://github.com/cristiantorr79-lab/MateKidsApp"
+                        target="_blank" rel="noopener noreferrer">Ver repositorio</a>
+                    <span class="project-btn project-btn-disabled">Demo no publicada</span>
+                </div>
+            </article>
 
             <article class="project card">
                 <h3>Cafelino POS</h3>
@@ -387,59 +481,16 @@
                     <li>Proyecto pensado para apoyar la gestión de ventas y organización básica del negocio.</li>
                     <li>Primer acercamiento práctico al desarrollo de aplicaciones con enfoque real.</li>
                     <li>Uso de tecnología como herramienta para resolver necesidades concretas de un emprendimiento.</li>
-                    <li>Refleja mi avance desde ideas iniciales hasta proyectos con mayor estructura y proyección.</li>
                 </ul>
                 <div class="meta">
-                    <span class="tag">Proyecto inicial</span>
+                    <span class="tag">POS</span>
                     <span class="tag">Emprendimiento familiar</span>
-                    <span class="tag">Gestión de ventas</span>
-                    <span class="tag">Primer acercamiento a IA</span>
+                    <span class="tag">Gestión</span>
                     <span class="tag status">Primer proyecto tecnológico</span>
                 </div>
-            </article>
-
-            <article class="project card">
-                <h3>MateKids</h3>
-                <p>
-                    Aplicación educativa móvil orientada a niños de 8 a 9 años, diseñada para practicar matemáticas de
-                    manera simple, visual e interactiva. Surge como proyecto final del bootcamp y representa una etapa
-                    de mayor estructura técnica en mi proceso de formación.
-                </p>
-                <ul>
-                    <li>Implementación de pantallas de acceso, navegación y flujo de juego.</li>
-                    <li>Trabajo con lógica de niveles, experiencia de usuario y progresión de aprendizaje.</li>
-                    <li>Proyecto ideal para demostrar orden, estructura y construcción de producto móvil.</li>
-                    <li>Aplicación de buenas prácticas en desarrollo Android con foco educativo.</li>
-                </ul>
-                <div class="meta">
-                    <span class="tag">Android</span>
-                    <span class="tag">Kotlin</span>
-                    <span class="tag">Educación</span>
-                    <span class="tag">UI móvil</span>
-                    <span class="tag status">Proyecto final bootcamp</span>
-                </div>
-            </article>
-
-            <article class="project card">
-                <h3>Agrovista</h3>
-                <p>
-                    Proyecto orientado al apoyo del sector agrícola, con foco en monitoreo de predios, registro de
-                    evaluaciones y generación de reportes técnicos para facilitar decisiones en terreno. Es el proyecto
-                    donde más se refleja mi evolución en tecnología, visión de producto y resolución de problemas
-                    reales.
-                </p>
-                <ul>
-                    <li>Enfoque en pequeños productores, agricultura familiar campesina y uso en zonas con baja conectividad.</li>
-                    <li>Combinación de lógica técnica, claridad de uso y visión de impacto real.</li>
-                    <li>Integración de app móvil, backend y generación de informes PDF.</li>
-                    <li>Ruta futura preparada para incorporar análisis satelital e inteligencia artificial.</li>
-                </ul>
-                <div class="meta">
-                    <span class="tag">React Native / Expo</span>
-                    <span class="tag">TypeScript</span>
-                    <span class="tag">Spring Boot</span>
-                    <span class="tag">Agritech</span>
-                    <span class="tag status">Proyecto en desarrollo</span>
+                <div class="project-actions">
+                    <span class="project-btn project-btn-disabled">Repositorio no publicado aún</span>
+                    <span class="project-btn project-btn-disabled">Demo no disponible</span>
                 </div>
             </article>
         </section>
@@ -447,9 +498,9 @@
         <section id="caso-estudio" class="highlight">
             <h2>Caso de estudio · Agrovista</h2>
             <p class="lead">
-                Agrovista nace como una propuesta tecnológica pensada principalmente para apoyar a <strong>pequeños agricultores,
-                pequeños productores y la agricultura familiar campesina (AFC)</strong>, entregando una herramienta más clara,
-                ordenada y útil para evaluar un predio, comprender su estado y apoyar decisiones en terreno.
+                Agrovista nace como una propuesta tecnológica orientada a apoyar a pequeños agricultores, pequeños
+                productores, agricultura familiar campesina y equipos técnicos que necesitan información más clara,
+                ordenada y útil para evaluar un predio y tomar decisiones en terreno.
             </p>
 
             <div class="grid grid-2">
@@ -457,29 +508,29 @@
                     <h3>Contexto del problema</h3>
                     <p>
                         En entornos agrícolas, muchas decisiones importantes todavía dependen de observación manual,
-                        información dispersa y registros poco estandarizados. Esto dificulta el seguimiento del estado del
-                        predio, la detección de problemas y la generación de reportes comprensibles, especialmente para
-                        <strong>pequeños agricultores, pequeños productores y familias campesinas</strong> que necesitan soluciones
-                        simples, útiles y aterrizadas a su realidad.
+                        información dispersa y registros poco estandarizados. Esto dificulta el seguimiento del estado
+                        del predio, la detección de problemas y la generación de reportes comprensibles para el
+                        productor.
                     </p>
                     <p>
-                        Además, en muchos sectores rurales la conectividad es limitada, por lo que cualquier solución digital
-                        debe ser clara, liviana y pensada para funcionar bien en condiciones reales, no solo en un escritorio.
+                        Además, en muchos sectores rurales la conectividad es limitada, por lo que cualquier solución
+                        digital debe ser clara, liviana y pensada para funcionar bien en condiciones reales, no solo en
+                        un escritorio.
                     </p>
                 </article>
 
                 <article class="card">
                     <h3>La solución propuesta</h3>
                     <p>
-                        Agrovista se plantea como una solución móvil y de apoyo técnico que permite registrar evaluaciones de
-                        predios, organizar sectores, asociar observaciones y generar informes en PDF con información útil para
-                        terreno, con un foco especial en acercar tecnología a <strong>pequeños agricultores, productores locales y
-                        agricultura familiar campesina</strong>.
+                        Agrovista se plantea como una solución móvil y de apoyo técnico que permite registrar
+                        evaluaciones de predios, organizar sectores, asociar observaciones y generar informes en PDF con
+                        información útil para terreno.
                     </p>
                     <p>
-                        La visión de largo plazo considera integrar análisis satelital e inteligencia artificial como partes
-                        clave del sistema. Actualmente esos componentes están contemplados en la arquitectura del proyecto, pero
-                        se mantienen desactivados hasta contar con financiamiento para su implementación real.
+                        La visión de largo plazo considera integrar análisis satelital e inteligencia artificial como
+                        partes clave del sistema. Actualmente esos componentes están contemplados en la arquitectura del
+                        proyecto, pero se mantienen desactivados hasta contar con financiamiento para su implementación
+                        real.
                     </p>
                 </article>
             </div>
@@ -488,14 +539,14 @@
                 <article class="card">
                     <h3>Mi enfoque y aporte</h3>
                     <p>
-                        En este proyecto he trabajado combinando lógica funcional, visión de negocio y entendimiento del uso en
-                        terreno. Mi foco no ha sido solo “hacer una app”, sino avanzar hacia una herramienta que realmente
-                        sirva a usuarios con necesidades concretas.
+                        En este proyecto he trabajado combinando lógica funcional, visión de negocio y entendimiento del
+                        uso en terreno. Mi foco no ha sido solo “hacer una app”, sino avanzar hacia una herramienta que
+                        realmente sirva a usuarios con necesidades concretas.
                     </p>
                     <ul>
                         <li>Definición del propósito del producto y del problema que busca resolver.</li>
                         <li>Participación en el diseño del flujo de evaluación y visualización de información.</li>
-                        <li>Enfoque en claridad de uso para contextos rurales, perfiles no técnicos y pequeños agricultores.</li>
+                        <li>Enfoque en claridad de uso para contextos rurales y perfiles no técnicos.</li>
                         <li>Visión de evolución futura con IA, análisis satelital y automatización.</li>
                     </ul>
                 </article>
@@ -509,12 +560,11 @@
                         <li>Modelo preparado para escalar hacia integración satelital e IA aplicada.</li>
                     </ul>
                     <div class="badge-wrap" style="margin-top: 14px;">
-                        <span class="badge">React Native / Expo</span>
-                        <span class="badge">TypeScript</span>
-                        <span class="badge">Spring Boot</span>
-                        <span class="badge">MySQL</span>
+                        <span class="badge">App móvil</span>
+                        <span class="badge">Backend</span>
                         <span class="badge">PDF Reports</span>
                         <span class="badge">Agritech</span>
+                        <span class="badge">IA proyectada</span>
                     </div>
                 </article>
             </div>
@@ -523,14 +573,13 @@
                 <article class="card">
                     <h3>Qué hace valioso este proyecto</h3>
                     <p>
-                        Agrovista refleja mi manera de entender la tecnología: como una herramienta para resolver problemas
-                        reales, no como una vitrina. Une mi interés por el emprendimiento, la productividad, la transformación
-                        digital y el aprendizaje técnico aplicado, con una intención concreta de aportar valor a
-                        <strong>pequeños agricultores, productores y agricultura familiar campesina</strong>.
+                        Agrovista refleja mi manera de entender la tecnología: como una herramienta para resolver
+                        problemas reales, no como una vitrina. Une mi interés por el emprendimiento, la productividad,
+                        la transformación digital y el aprendizaje técnico aplicado.
                     </p>
                     <p>
-                        También muestra mi capacidad para pensar un producto con proyección: partir con una base funcional y
-                        dejar preparada una ruta de crecimiento más ambiciosa y sostenible.
+                        También muestra mi capacidad para pensar un producto con proyección: partir con una base
+                        funcional y dejar preparada una ruta de crecimiento más ambiciosa y sostenible.
                     </p>
                 </article>
 
@@ -538,9 +587,12 @@
                     <h3>Aprendizajes clave</h3>
                     <ul>
                         <li>Diseñar pensando en el usuario real cambia completamente la forma de construir.</li>
-                        <li>Un buen producto necesita equilibrio entre visión técnica, claridad y utilidad práctica.</li>
-                        <li>La arquitectura y el flujo deben prepararse desde temprano para crecer sin romper todo después.</li>
-                        <li>La tecnología tiene más valor cuando conversa con el territorio, el contexto y la necesidad real.</li>
+                        <li>Un buen producto necesita equilibrio entre visión técnica, claridad y utilidad práctica.
+                        </li>
+                        <li>La arquitectura y el flujo deben prepararse desde temprano para crecer sin romper todo
+                            después.</li>
+                        <li>La tecnología tiene más valor cuando conversa con el territorio, el contexto y la necesidad
+                            real.</li>
                     </ul>
                 </article>
             </div>
@@ -561,7 +613,8 @@
                 <article class="card">
                     <h3>Formación complementaria</h3>
                     <ul>
-                        <li>IA aplicada mediante formación autónoma en plataformas como Google, Alura y Learning Heroes.</li>
+                        <li>IA aplicada mediante formación autónoma en plataformas como Google, Alura y Learning Heroes.
+                        </li>
                         <li>Cursos SENCE en gestión, contabilidad y modelos de negocio.</li>
                         <li>Base sólida en administración y operación de emprendimientos.</li>
                     </ul>
@@ -572,11 +625,10 @@
         <section id="objetivo" class="highlight">
             <h2>Objetivo profesional</h2>
             <p>
-                Mi meta es crecer como profesional en tecnología, integrando desarrollo Android, inteligencia artificial
-                y gestión estratégica
-                para crear soluciones digitales con sentido práctico. Me interesa participar en proyectos donde pueda
-                aportar visión de negocio,
-                compromiso con el aprendizaje y capacidad para construir herramientas que realmente sirvan.
+                Mi meta es crecer como profesional en tecnología, integrando desarrollo Android, inteligencia
+                artificial y gestión estratégica para crear soluciones digitales con sentido práctico. Me interesa
+                participar en proyectos donde pueda aportar visión de negocio, compromiso con el aprendizaje y
+                capacidad para construir herramientas que realmente sirvan.
             </p>
         </section>
 
