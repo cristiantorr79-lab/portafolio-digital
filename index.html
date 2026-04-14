@@ -18,6 +18,8 @@
             --muted: #5f6b7a;
             --border: #e7ecf3;
             --success: #eaf7ee;
+            --info: #eef4ff;
+            --warning: #fff8dd;
         }
 
         * {
@@ -60,7 +62,7 @@
         .hero p {
             margin: 0;
             font-size: 1.08rem;
-            max-width: 820px;
+            max-width: 860px;
         }
 
         .hero-actions,
@@ -193,6 +195,15 @@
             font-weight: 700;
         }
 
+        .project-intro {
+            background: var(--info);
+            border: 1px solid #dbe6ff;
+            border-radius: 14px;
+            padding: 16px 18px;
+            margin-bottom: 18px;
+            color: #31415f;
+        }
+
         .project {
             border-left: 6px solid var(--primary);
             padding-left: 18px;
@@ -220,6 +231,14 @@
             background: var(--success);
             color: #1d6b39;
             border: 1px solid #cdebd6;
+        }
+
+        .journey {
+            background: var(--warning);
+            border: 1px dashed #e5c700;
+            border-radius: 14px;
+            padding: 16px 18px;
+            margin-top: 14px;
         }
 
         ul {
@@ -274,8 +293,8 @@
         <header class="hero">
             <h1>Cristian Torres Ojeda</h1>
             <p>
-                Desarrollador Android Junior en formación | Técnico en Administración y Gestión de Empresas |
-                Emprendedor con foco en soluciones digitales, productividad e IA aplicada.
+                Desarrollador Android Junior en formación, emprendedor y Técnico en Administración y Gestión de
+                Empresas, con foco en crear soluciones digitales útiles, claras y conectadas con problemas reales.
             </p>
 
             <div class="hero-actions">
@@ -291,22 +310,19 @@
             <h2>Sobre mí</h2>
             <p class="lead">
                 Combino experiencia real en gestión, operación y emprendimiento con una transición firme al mundo
-                tecnológico.
-                Mi enfoque está en construir soluciones útiles, claras y con impacto real para personas, pymes y
-                proyectos con visión de crecimiento.
+                tecnológico. Mi enfoque está en construir soluciones con sentido práctico, capaces de aportar valor a
+                personas, pymes y proyectos con visión de crecimiento.
             </p>
             <p>
                 Soy Técnico en Administración y Gestión de Empresas, con más de 15 años de experiencia en terreno.
-                He liderado y apoyado iniciativas en distintos sectores, siempre con una mirada práctica: ordenar
-                procesos,
-                detectar oportunidades y convertir problemas en mejoras concretas.
+                He liderado y apoyado iniciativas en distintos sectores, siempre con una mirada concreta: ordenar
+                procesos, detectar oportunidades y convertir problemas en mejoras reales.
             </p>
             <p>
-                Actualmente me encuentro en la etapa final de formación en desarrollo móvil Android, fortaleciendo
-                conocimientos en Kotlin,
-                arquitectura de aplicaciones e integración de herramientas digitales. Además, me he formado de manera
-                autónoma en IA aplicada,
-                gestión, contabilidad y modelos de negocio.
+                Actualmente estoy en la etapa final de un bootcamp de desarrollo de aplicaciones móviles Android,
+                fortaleciendo conocimientos en Kotlin, arquitectura de aplicaciones y construcción de productos
+                digitales. Además, me he formado de manera autónoma en inteligencia artificial aplicada, gestión,
+                contabilidad y modelos de negocio.
             </p>
         </section>
 
@@ -315,18 +331,18 @@
             <div class="grid grid-3">
                 <article class="card">
                     <h3>Visión de negocio</h3>
-                    <p>No veo el software como adorno. Lo veo como herramienta para resolver problemas, ahorrar tiempo y
-                        generar valor.</p>
+                    <p>No veo la tecnología como adorno. La veo como herramienta para resolver problemas, ahorrar tiempo
+                        y mejorar procesos con impacto real.</p>
                 </article>
                 <article class="card">
                     <h3>Aprendizaje continuo</h3>
-                    <p>Me gusta aprender, probar, corregir y mejorar. Entro de frente a lo técnico sin perder el sentido
-                        práctico.</p>
+                    <p>Me gusta aprender, probar, corregir y mejorar. Entro de frente a lo técnico, pero sin perder el
+                        sentido práctico.</p>
                 </article>
                 <article class="card">
                     <h3>Experiencia real</h3>
                     <p>Tengo base administrativa y experiencia operativa, lo que me permite entender mejor las
-                        necesidades reales de un proyecto.</p>
+                        necesidades reales de un negocio o proyecto.</p>
                 </article>
             </div>
         </section>
@@ -339,7 +355,10 @@
                     <div class="badge-wrap">
                         <span class="badge">Kotlin</span>
                         <span class="badge">Android Studio</span>
-                        <span class="badge">Git & GitHub</span>
+                        <span class="badge">Jetpack Compose</span>
+                        <span class="badge">Git &amp; GitHub</span>
+                        <span class="badge">React Native / Expo</span>
+                        <span class="badge">Spring Boot</span>
                         <span class="badge">HTML</span>
                         <span class="badge">GitHub Pages</span>
                         <span class="badge">IA Generativa Aplicada</span>
@@ -361,23 +380,35 @@
 
         <section id="proyectos">
             <h2>Proyectos destacados</h2>
+            <div class="project-intro">
+                Estos proyectos muestran mi evolución en tecnología: desde una primera idea aplicada a un
+                emprendimiento familiar, pasando por un proyecto formativo con estructura más sólida, hasta una
+                solución con visión de impacto real para el sector agrícola.
+            </div>
 
             <article class="project card">
-                <h3>Agrovista</h3>
+                <h3>Cafelino POS</h3>
                 <p>
-                    Proyecto orientado al monitoreo agrícola, con foco en visualización de indicadores como NDVI y NDWI,
-                    y una proyección futura hacia automatización, apoyo satelital e IA aplicada al sector agrícola.
+                    Cafelino POS fue una de mis primeras aproximaciones al mundo de la programación y la inteligencia
+                    artificial. Nació como una idea para apoyar un emprendimiento familiar: una cafetería con temática
+                    de gatos que estamos desarrollando junto a mi hermana.
+                </p>
+                <p>
+                    Aunque es una aplicación básica y aún no está terminada, decidí incluirla en mi portafolio porque
+                    representa el inicio de mi transición hacia el mundo tecnológico y marca el punto donde comencé a
+                    usar herramientas digitales para resolver necesidades reales de un negocio.
                 </p>
                 <ul>
-                    <li>Enfoque en solución útil para pequeños productores y entornos con conectividad limitada.</li>
-                    <li>Combinación de lógica técnica con visión de terreno y usabilidad.</li>
-                    <li>Proyecto pensado para resolver problemas reales del mundo agrícola.</li>
+                    <li>Proyecto pensado para apoyar la gestión de ventas y la organización básica del negocio.</li>
+                    <li>Primer acercamiento práctico al desarrollo de aplicaciones con enfoque real.</li>
+                    <li>Conexión directa entre emprendimiento, operación y solución digital.</li>
+                    <li>Refleja mi punto de partida y la evolución que he tenido en pocos meses de aprendizaje.</li>
                 </ul>
                 <div class="meta">
-                    <span class="tag">Android</span>
-                    <span class="tag">Kotlin</span>
-                    <span class="tag">IA aplicada</span>
-                    <span class="tag">Agritech</span>
+                    <span class="tag">Primer proyecto tecnológico</span>
+                    <span class="tag">Emprendimiento familiar</span>
+                    <span class="tag">Gestión de ventas</span>
+                    <span class="tag">Primer acercamiento a IA</span>
                     <span class="tag status">En desarrollo</span>
                 </div>
             </article>
@@ -385,43 +416,60 @@
             <article class="project card">
                 <h3>MateKids</h3>
                 <p>
-                    Aplicación educativa móvil enfocada en apoyar el aprendizaje de matemáticas para niños de forma
-                    simple,
-                    visual e interactiva. Surge como proyecto final del bootcamp.
+                    Aplicación educativa móvil creada como proyecto final del bootcamp, orientada a apoyar el
+                    aprendizaje de matemáticas en niños de 8 a 9 años de forma simple, visual e interactiva.
+                </p>
+                <p>
+                    Este proyecto representa un salto en estructura y buenas prácticas, porque me permitió trabajar con
+                    una lógica más ordenada, enfoque de producto y una experiencia pensada para un público específico.
                 </p>
                 <ul>
-                    <li>Diseño con foco en experiencia clara, amigable y funcional.</li>
-                    <li>Orientada a aprendizaje progresivo y motivación del usuario infantil.</li>
-                    <li>Proyecto ideal para demostrar lógica, estructura y enfoque de producto.</li>
+                    <li>Diseño de flujo claro entre acceso, juego y resultados.</li>
+                    <li>Uso de arquitectura MVVM para mantener orden y escalabilidad.</li>
+                    <li>Construcción de interfaz moderna con Jetpack Compose.</li>
+                    <li>Integración de autenticación de usuarios con Firebase.</li>
                 </ul>
                 <div class="meta">
-                    <span class="tag">Android</span>
                     <span class="tag">Kotlin</span>
-                    <span class="tag">Educación</span>
-                    <span class="tag">UI móvil</span>
-                    <span class="tag status">Proyecto final</span>
+                    <span class="tag">Jetpack Compose</span>
+                    <span class="tag">MVVM</span>
+                    <span class="tag">Firebase Auth</span>
+                    <span class="tag status">Proyecto final bootcamp</span>
                 </div>
             </article>
 
             <article class="project card">
-                <h3>Cafelino POS</h3>
+                <h3>Agrovista</h3>
                 <p>
-                    Propuesta de sistema para automatizar ventas y apoyar la gestión de stock de una cafetería,
-                    buscando mejorar la operación diaria y entregar mejor control del negocio.
+                    Plataforma orientada al apoyo del sector agrícola, enfocada en el monitoreo de predios y la
+                    generación de reportes técnicos para facilitar la toma de decisiones en terreno.
+                </p>
+                <p>
+                    Es uno de mis proyectos con mayor proyección, porque combina visión de negocio, desarrollo móvil,
+                    backend, reportes y una mirada futura hacia análisis satelital e inteligencia artificial aplicada al
+                    agro, con foco en pequeños productores y contextos de baja conectividad.
                 </p>
                 <ul>
-                    <li>Enfoque práctico en orden, seguimiento y eficiencia operativa.</li>
-                    <li>Conexión directa entre necesidades del negocio y solución digital.</li>
-                    <li>Proyecto alineado con experiencia administrativa y visión emprendedora.</li>
+                    <li>Trabajo con lógica funcional, estructura de datos, formularios y flujo de evaluaciones.</li>
+                    <li>Generación de reportes y enfoque en usabilidad para necesidades reales del campo.</li>
+                    <li>Integración entre experiencia técnica y comprensión del problema en terreno.</li>
+                    <li>Proyección de automatización, análisis NDVI/NDWI e IA aplicada al sector agrícola.</li>
                 </ul>
                 <div class="meta">
-                    <span class="tag">POS</span>
-                    <span class="tag">Gestión</span>
-                    <span class="tag">Automatización</span>
-                    <span class="tag">Negocio</span>
-                    <span class="tag status">En desarrollo</span>
+                    <span class="tag">React Native / Expo</span>
+                    <span class="tag">TypeScript</span>
+                    <span class="tag">Spring Boot</span>
+                    <span class="tag">MySQL</span>
+                    <span class="tag">Agritech</span>
+                    <span class="tag status">Proyecto en desarrollo</span>
                 </div>
             </article>
+
+            <div class="journey">
+                <strong>En conjunto, estos tres proyectos cuentan una historia clara:</strong> empecé aplicando
+                tecnología a un negocio cercano, luego avancé hacia un producto móvil más estructurado, y hoy trabajo
+                en una solución con mayor complejidad técnica y visión de impacto sectorial.
+            </div>
         </section>
 
         <section id="formacion">
@@ -442,7 +490,7 @@
                         <li>IA aplicada mediante formación autónoma en plataformas como Google, Alura y Learning Heroes.
                         </li>
                         <li>Cursos SENCE en gestión, contabilidad y modelos de negocio.</li>
-                        <li>Base sólida en administración y operación de emprendimientos.</li>
+                        <li>Base sólida en administración, operación y desarrollo de emprendimientos.</li>
                     </ul>
                 </article>
             </div>
@@ -451,11 +499,10 @@
         <section id="objetivo" class="highlight">
             <h2>Objetivo profesional</h2>
             <p>
-                Mi meta es crecer como profesional en tecnología, integrando desarrollo Android, inteligencia artificial
-                y gestión estratégica
-                para crear soluciones digitales con sentido práctico. Me interesa participar en proyectos donde pueda
-                aportar visión de negocio,
-                compromiso con el aprendizaje y capacidad para construir herramientas que realmente sirvan.
+                Mi meta es crecer como profesional en tecnología, integrando desarrollo Android, inteligencia
+                artificial y gestión estratégica para crear soluciones digitales con sentido práctico. Me interesa
+                participar en proyectos donde pueda aportar visión de negocio, compromiso con el aprendizaje y
+                capacidad para construir herramientas que realmente sirvan.
             </p>
         </section>
 
